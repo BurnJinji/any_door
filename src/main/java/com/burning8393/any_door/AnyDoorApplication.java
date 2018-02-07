@@ -19,24 +19,7 @@ import javax.annotation.Resource;
 @SpringBootApplication
 @MapperScan("com.burning8393.any_door.dao")
 public class AnyDoorApplication {
-    @Autowired
-    private Book book;
-    @Autowired
-    private UserMapper userMapper;
     public static void main(String[] args) {
         SpringApplication.run(AnyDoorApplication.class, args);
-    }
-
-    @RequestMapping(value = "/", produces = "text/plain;charset=UTF-8")
-    public String index() {
-        return "Hello Spring Boot! The BookName is " + book.getName() + ";and Book Author is " + book.getAuthor() + ";and Book Price is " + book.getPrice();
-    }
-
-    @RequestMapping(value = "/user")
-    public User user() {
-        String id = "248204282";
-        User user = null;
-        user = userMapper.selectByPrimaryKey(id);
-        return user;
     }
 }
