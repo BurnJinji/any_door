@@ -6,5 +6,6 @@
 
 <body>
 <h1>你好,master</h1>
+<a href="/user/enroll">登记</a>
 </body>
 </html>
